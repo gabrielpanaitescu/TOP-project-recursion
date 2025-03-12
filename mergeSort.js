@@ -27,15 +27,17 @@ const merge = (arr1, arr2) => {
 
 const mergeSort = (arr) => {
   const len = arr.length;
+  if (len < 1) return "Provide non empty array";
   if (len === 1) return arr;
 
-  const half1 = mergeSort(arr.slice(0, len / 2));
-  const half2 = mergeSort(arr.slice(len / 2, len));
+  const middle = Math.floor(len / 2);
+  const half1 = mergeSort(arr.slice(0, middle));
+  const half2 = mergeSort(arr.slice(middle, len));
 
   return merge(half1, half2);
 };
 
-const unsortedArr = [3, 2, 1, 13, 8, 5, 0, 1];
+const unsortedArr = [1, 2];
 const sortedArr = mergeSort(unsortedArr);
 
 console.log(sortedArr);
