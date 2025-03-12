@@ -27,7 +27,7 @@ const merge = (arr1, arr2) => {
 
 const mergeSort = (arr) => {
   const len = arr.length;
-  if (len < 1) return "Provide non empty array";
+  if (len < 1) return [];
   if (len === 1) return arr;
 
   const middle = Math.floor(len / 2);
