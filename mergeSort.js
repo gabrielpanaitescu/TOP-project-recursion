@@ -37,7 +37,7 @@ const mergeSort = (arr) => {
   return merge(half1, half2);
 };
 
-const unsortedArr = [1, 2];
+const unsortedArr = [3, 2, 1, 13, 8, 5, 0, 1];
 const sortedArr = mergeSort(unsortedArr);
 
 console.log(sortedArr);
